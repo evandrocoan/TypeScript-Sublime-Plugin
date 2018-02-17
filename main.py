@@ -51,7 +51,7 @@ try:
 except:
     pass
 
-logger.log.warn('TypeScript plugin initialized.')
+# logger.log.warn('TypeScript plugin initialized.')
 
 
 def plugin_loaded():
