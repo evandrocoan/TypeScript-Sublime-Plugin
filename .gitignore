@@ -9,7 +9,7 @@ src/service/editorServices.d.ts
 libs/rpdb/
 libs/ptvsd/
 *.pyc
-TS.log
+TypeScript.log
 *.pyproj
 *.sln
 ptvsd/*

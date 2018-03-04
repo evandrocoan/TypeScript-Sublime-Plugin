@@ -14,12 +14,12 @@ from .global_vars import LOG_CONSOLE_LEVEL, LOG_FILE_LEVEL
 
 # The default path to the log file created for diagnostic output
 _pluginRoot = path.dirname(path.dirname(path.abspath(__file__)))
-filePath = path.join(_pluginRoot, 'TS.log')
+filePath = path.join(_pluginRoot, 'TypeScript.log')
 
-log = logging.getLogger('TS')
+log = logging.getLogger('TypeScript')
 log.setLevel(logging.WARN)
 
-_logFormat = logging.Formatter('%(asctime)s: %(thread)d: %(levelname)s: %(message)s')
+_logFormat = logging.Formatter('%(asctime)s: %(thread)d: %(name)s.%(funcName)s %(levelname)s: %(message)s')
 
 logFile = logging.FileHandler(filePath, mode='w')
 logFile.setLevel(logging.DEBUG)
