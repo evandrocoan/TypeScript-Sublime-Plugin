@@ -32,7 +32,7 @@ class TypescriptGoToRefCommand(sublime_plugin.TextCommand):
         pos = self.view.sel()[0].begin()
         cursor = self.view.rowcol(pos)
         ref_info = cli.get_ref_info()
-        mapping = ref_info.get_mapping(str(cursor[0]))
+        mapping = ref_info.get_mapping(str(cursor[0])) if ref_info else None
         if mapping:
             (filename, l, c, p, n) = mapping.as_tuple()
             update_ref_line(ref_info, cursor[0], self.view)
