@@ -23,28 +23,27 @@ To do that, update the `Settings - User` file with the following:
 "typescript_tsdk": "<path to your folder>/node_modules/typescript/lib"
 ```
 
-Installation
-------------
-If using [Package Control](https://packagecontrol.io/) for Sublime Text, simply install the `TypeScript` package.
+## Installation
 
-Alternatively, you can clone the repo directly into your Sublime plugin folder.  For example, for Sublime Text 3 on a Mac this would look something like:
+### By Package Control
 
-```
-cd ~/"Library/Application Support/Sublime Text 3/Packages"
-git clone --depth 1 https://github.com/Microsoft/TypeScript-Sublime-Plugin.git TypeScript
-```
+1. Download & Install `Sublime Text 3` (https://www.sublimetext.com/3)
+1. Go to the menu `Tools -> Install Package Control`, then,
+   wait few seconds until the `Package Control` installation finishes
+1. Go to the menu `Preferences -> Package Control`
+1. Type `Package Control Add Channel` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, input the following address and press <kbd>Enter</kbd>
+   ```
+   https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/channel.json
+   ```
+1. Now, go again to the menu `Preferences -> Package Control`
+1. This time type `Package Control Install Package` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, search for `TypeScript` and press <kbd>Enter</kbd>
 
-And on Windows:
+See also:
+1. [ITE - Integrated Toolset Environment](https://github.com/evandrocoan/ITE)
+1. [Package control docs](https://packagecontrol.io/docs/usage) for details.
 
-```
-cd "%APPDATA%\Sublime Text 3\Packages"
-git clone --depth 1 https://github.com/Microsoft/TypeScript-Sublime-Plugin.git TypeScript
-```
-
-(`--depth 1` downloads only the current version to reduce the clone size.)
-Note if you are using the portable version of Sublime Text, the location will be different.  (See http://docs.sublimetext.info/en/latest/basic_concepts.html#the-data-directory for more info).
-
-**IMPORTANT** If you already have a package called `TypeScript` installed, either remove this first, or clone this repo to a different folder, else module name resolution can break the plugin.
 
 Platform support
 ----------------
