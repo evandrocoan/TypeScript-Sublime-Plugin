@@ -25,6 +25,10 @@ To do that, update the `Settings - User` file with the following:
 
 ## Installation
 
+To enabled debug mode:
+1. Go to `Packages/Typescript/typescript/libs/global_vars.py`, and change the `LOG_CONSOLE_LEVEL` to `logging.DEBUG`.
+1. Restart sublime and try editing a `.ts` file, and see the messages in your console.
+
 ### By Package Control
 
 1. Download & Install **`Sublime Text 3`** (https://www.sublimetext.com/3)
