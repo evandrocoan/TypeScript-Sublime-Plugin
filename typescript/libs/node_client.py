@@ -139,7 +139,10 @@ class NodeCommClient(CommClient):
         while True:
             cmd = self.postq.get(True) + "\n"
             if not self.server_proc:
-                log.debug("can not send request; node process not running")
+                import random
+                sleep_time = random.randrange(1, 60)
+                time.sleep(sleep_time)
+                log.debug("can not send request; node process not running, sleeping %s seconds.", sleep_time)
             else:
                 st = time.time()
                 self.server_proc.stdin.write(cmd.encode())
